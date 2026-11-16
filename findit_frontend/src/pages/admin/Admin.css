@@ -1,0 +1,38 @@
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.stat { display: flex; flex-direction: column; gap: 6px; padding: 20px; }
+a.stat:hover { border-color: var(--line-3); }
+.stat-n { font-family: var(--font-head); font-size: 34px; letter-spacing: -0.03em; }
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+.bars { display: flex; flex-direction: column; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 140px 1fr 40px; align-items: center; gap: 12px; font-size: 14px; }
+.bar-label { color: var(--sub); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-track { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 999px; min-width: 2px; }
+.bar-val { text-align: right; font-weight: 600; }
+
+.legend { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--sub); }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.trend { display: flex; align-items: flex-end; gap: 6px; height: 190px; }
+.trend-col { flex: 1; min-width: 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; }
+.trend-bars { flex: 1; display: flex; align-items: flex-end; justify-content: center; gap: 2px; }
+.trend-bars > div { width: 40%; max-width: 14px; min-height: 2px; border-radius: 3px 3px 0 0; }
+.trend-d { text-align: center; font-size: 12px; }
+
+.filters-row { gap: 10px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--panel); }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th { text-align: left; padding: 12px 16px; color: var(--dim); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.table td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.table tr:last-child td { border-bottom: 0; }
+.sel-sm { min-height: 40px; width: auto; }
+
+.settings { display: flex; flex-direction: column; gap: 24px; max-width: 760px; }
+.switch-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; padding: 16px; border-radius: var(--r-md); background: var(--bg); border: 1px solid var(--line-2); }
+.switch-row input { width: 44px; height: 24px; accent-color: var(--found); flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 110px 1fr 32px; }
+}

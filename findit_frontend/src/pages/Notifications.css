@@ -1,0 +1,10 @@
+.notif-list { display: flex; flex-direction: column; gap: 10px; }
+.notif {
+  width: 100%; display: flex; align-items: flex-start; gap: 14px; padding: 16px; text-align: left;
+  border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line);
+}
+.notif:hover { border-color: var(--line-3); }
+.notif.unread { border-color: var(--line-3); background: var(--panel-2); }
+.notif-ic { width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: var(--bg); border: 1px solid var(--line-2); display: flex; align-items: center; justify-content: center; }
+.notif-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.notif-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--info); margin-top: 6px; flex-shrink: 0; }

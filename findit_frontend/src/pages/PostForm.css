@@ -1,0 +1,8 @@
+.pform { display: flex; flex-direction: column; gap: 24px; }
+
+.type-seg { padding: 4px; border-radius: 16px; background: var(--panel); }
+.type-seg button { min-height: 52px; font-size: 16px; border-radius: 12px; }
+.type-seg button.on.lost { background: var(--lost-bg); color: var(--lost); }
+.type-seg button.on.found { background: var(--found-bg); color: var(--found); }
+
+.file-input:focus-visible + * { outline: 2px solid var(--info); }

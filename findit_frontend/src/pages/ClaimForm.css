@@ -1,0 +1,23 @@
+.claim-layout { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+.claim-form { flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.claim-side { flex: 1 1 340px; max-width: 400px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.claim-post { display: flex; gap: 14px; align-items: center; padding: 16px; }
+.claim-thumb { width: 72px; height: 72px; flex-shrink: 0; border-radius: var(--r-md); background: var(--panel-2); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.claim-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.claim-post-info { display: flex; flex-direction: column; gap: 2px; align-items: flex-start; min-width: 0; }
+
+.opt {
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: var(--r-md);
+  background: var(--bg); border: 1.5px solid var(--line-2); cursor: pointer;
+}
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt.on { border-color: var(--lost); background: var(--lost-bg); }
+.opt:has(input:focus-visible) { outline: 2px solid var(--info); outline-offset: 2px; }
+.opt-radio { width: 20px; height: 20px; flex-shrink: 0; border-radius: 50%; border: 2px solid var(--line-3); }
+.opt.on .opt-radio { border-color: var(--lost); background: radial-gradient(circle, var(--lost) 45%, transparent 50%); }
+.opt-text { display: flex; flex-direction: column; font-size: 14px; }
+.opt-text strong { font-size: 15px; }
+
+.next-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.next-steps li { display: flex; gap: 14px; }
+.next-steps .step-n { width: 28px; height: 28px; flex-shrink: 0; font-size: 13px; }

@@ -1,0 +1,16 @@
+.pcard {
+  display: flex; flex-direction: column;
+  border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line);
+  overflow: hidden; min-width: 0; transition: border-color 0.15s, transform 0.15s;
+}
+.pcard:hover { border-color: var(--line-3); transform: translateY(-2px); }
+.pcard-img { height: 170px; background: var(--panel-2); display: flex; align-items: center; justify-content: center; }
+.pcard-img img { width: 100%; height: 100%; object-fit: cover; }
+.pcard-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.pcard-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pcard-date { font-size: 13px; }
+.pcard-title { font-size: 18px; letter-spacing: -0.02em; font-weight: 700; line-height: 1.25; }
+.pcard-place { display: flex; align-items: center; gap: 6px; font-size: 14px; min-width: 0; }
+.pcard-place span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
